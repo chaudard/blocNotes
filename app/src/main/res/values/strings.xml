@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">blocNotes</string>
+    <string name="hide">Cacher</string>
+    <string name="show">Afficher</string>
+    <string name="bold">Gras</string>
+    <string name="italic">Italique</string>
+    <string name="underline">Souligné</string>
+    <string name="blue">Bleu</string>
+    <string name="red">Rouge</string>
+    <string name="black">Noir</string>
+    <string name="smileys">Smileys :</string>
+    <string name="divider">Séparateur</string>
+    <string name="edit">Édition :</string>
+    <string name="preview">Prévisualisation : </string>
+    <string name="smile">Smiley content</string>
+    <string name="clin">Smiley qui fait un clin d\oeil</string>
+    <string name="heureux">Smiley avec un gros sourire</string>
+</resources>

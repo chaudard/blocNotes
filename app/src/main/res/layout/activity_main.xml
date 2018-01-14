@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.virgo.blocnotes.Slider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.virgo.blocnotes.MainActivity"
+
+    android:id="@+id/slider"
+    android:orientation="vertical"
+    android:padding="5dip"
+    style="@style/blueBackground">
+
+    <RelativeLayout
+        android:id="@+id/toHide"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/main_appear"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+        <Button
+            android:id="@+id/bold"
+            style="@style/optionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/bold" />
+        <TextView
+            android:id="@+id/smiley"
+            style="@style/blackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/bold"
+            android:paddingTop="5dip"
+            android:text="@string/smileys" />
+        <ImageButton
+            android:id="@+id/smile"
+            style="@style/translucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bold"
+            android:layout_toRightOf="@id/smiley"
+            android:contentDescription="@string/smile"
+            android:padding="5dip"
+            android:src="@drawable/smile" />
+        <ImageButton
+            android:id="@+id/heureux"
+            style="@style/translucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/smile"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/heureux"
+            android:padding="5dip"
+            android:src="@drawable/heureux" />
+        <ImageButton
+            android:id="@+id/clin"
+            style="@style/translucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/underline"
+            android:layout_alignRight="@+id/underline"
+            android:layout_alignTop="@id/smile"
+            android:contentDescription="@string/clin"
+            android:padding="5dip"
+            android:src="@drawable/clin" />
+        <Button
+            android:id="@+id/italic"
+            style="@style/optionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/italic" />
+
+        <Button
+            android:id="@+id/underline"
+            style="@style/optionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/underline" />
+        <RadioGroup
+            android:id="@+id/colors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/heureux"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/black"
+                style="@style/blackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/black" />
+
+            <RadioButton
+                android:id="@+id/blue"
+                style="@style/blackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blue" />
+
+            <RadioButton
+                android:id="@+id/red"
+                style="@style/blackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/red" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/hideShow"
+        style="@style/hideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="5dip"
+        android:text="@string/hide" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/divider"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_textfield" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:shrinkColumns="1" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                style="@style/blackText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/edit" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:textSize="8sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                style="@style/blackText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/preview" />
+
+            <TextView
+                android:id="@+id/text"
+                style="@style/blackText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:maxLines="100"
+                android:paddingLeft="5dip"
+                android:paddingTop="5dip"
+                android:scrollbars="vertical"
+                android:text=""
+                android:textSize="8sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="                    " />
+        </TableRow>
+    </TableLayout>
+</com.app.virgo.blocnotes.Slider>
